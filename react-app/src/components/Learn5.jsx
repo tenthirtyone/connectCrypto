@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {
   Navbar,
 } from 'react-bootstrap';
+import * as shajs from 'sha.js';
 
 
 class Learn4 extends Component {
@@ -10,17 +11,54 @@ class Learn4 extends Component {
     super(props);
 
     this.state = {
+      school: '',
+      date: '',
+      time: '',
       speed: 90,
+      hash: '0x1da51b8d8ff98f6a48f80ae79fe3ca6c26e1abb7b7d125259255d6d2b875ea08',
     }
   }
+
   render() {
-    const {speed} = this.state;
+    const {school, date, time, speed, hash} = this.state;
+
+    const setHash = () => {
+      const sha256 = shajs('sha256');
+      sha256.update(`${school + date + time + speed}`)
+
+      this.setState({
+        hash: '0x' + sha256.digest('hex'),
+      })
+    }
 
     const setSpeed = (evt) => {
       this.setState({
         speed: evt.target.value,
-      })
+      });
+      setHash();
     }
+
+    const setDate = (evt) => {
+      this.setState({
+        date: evt.target.value,
+      })
+      setHash();
+    }
+
+    const setTime = (evt) => {
+      this.setState({
+        time: evt.target.value,
+      })
+      setHash();
+    }
+
+    const setSchool = (evt) => {
+      this.setState({
+        school: evt.target.value,
+      })
+      setHash();
+    }
+
     return (
       <div className="container-fixed">
         <div className="row">
@@ -32,16 +70,18 @@ class Learn4 extends Component {
           <div className="col-xs-6">
             <form>
               <label>School Name</label><br />
-              <input type="text" placeholder="School Name" />
+              <input type="text" placeholder="School Name" onChange={setSchool} />
               <br />
               <label>Date</label><br />
-              <input type="date" />
+              <input type="date" onChange={setDate} />
               <br />
               <label>Time</label><br />
-              <input type="time" />
+              <input type="time" onChange={setTime} />
               <br />
               <label>Current Speed</label><br />
-              <input type="range" min="1" max="100" value={speed} onChange={setSpeed} />
+              <input type="range" min="1" max="100" className="slider" value={speed} onChange={setSpeed} />
+              <label>Cryptographic Hash</label><br />
+              {hash}
             </form>
 
           </div>

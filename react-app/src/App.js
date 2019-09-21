@@ -13,6 +13,7 @@ import Learn2 from './components/Learn2'
 import Learn3 from './components/Learn3'
 import Learn4 from './components/Learn4'
 import Learn5 from './components/Learn5'
+import Learn6 from './components/Learn6'
 
 function CurrentSlide({ mode, number, setSlide, setLearnMore, setMode }) {
   if (mode === 'demo') {
@@ -44,6 +45,10 @@ function CurrentSlide({ mode, number, setSlide, setLearnMore, setMode }) {
       case 6:
         return (<Learn5 ></Learn5>)
         break;
+        break;
+      case 7:
+        return (<Learn6 ></Learn6>)
+        break;
     }
   }
 }
@@ -63,7 +68,7 @@ class Dashboard extends Component {
 
   render() {
     const setSlide = async (number) => {
-      if (number >= 1 && number <= 6) {
+      if (number >= 1 && number <= 7) {
         await this.setState({
           slide: number,
         })

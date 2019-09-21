@@ -23,6 +23,7 @@
     "morgan": "~1.9.0",
     "react-hover-observer": "^2.1.0",
     "serve-favicon": "~2.4.5",
+    "sha.js": "^2.4.11",
     "superagent": "^3.8.2"
   },
   "devDependencies": {
