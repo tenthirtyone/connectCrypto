@@ -6,7 +6,21 @@ import {
 
 
 class Learn4 extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      speed: 90,
+    }
+  }
   render() {
+    const {speed} = this.state;
+
+    const setSpeed = (evt) => {
+      this.setState({
+        speed: evt.target.value,
+      })
+    }
     return (
       <div className="container-fixed">
         <div className="row">
@@ -16,10 +30,23 @@ class Learn4 extends Component {
           </div>
 
           <div className="col-xs-6">
-            Form
+            <form>
+              <label>School Name</label><br />
+              <input type="text" placeholder="School Name" />
+              <br />
+              <label>Date</label><br />
+              <input type="date" />
+              <br />
+              <label>Time</label><br />
+              <input type="time" />
+              <br />
+              <label>Current Speed</label><br />
+              <input type="range" min="1" max="100" value={speed} onChange={setSpeed} />
+            </form>
+
           </div>
           <div className="col-xs-6">
-            <div className="row underline">
+            <div className={`row underline ${speed <= 80 ? '' : 'dimmed'}`}>
               <div className="col-xs-4 red square">
                 Red
               </div>
@@ -27,7 +54,7 @@ class Learn4 extends Component {
                 Internet speed has dropped > 20% of agreed speed
               </div>
             </div>
-            <div className="row underline">
+            <div className={`row underline ${speed < 90 && speed > 80 ? '' : 'dimmed'}`}>
               <div className="col-xs-4 yellow square">
                 Yellow
               </div>
@@ -35,7 +62,7 @@ class Learn4 extends Component {
                 Internet speed {`<`} 10% - 20 % of agreed speed
               </div>
             </div>
-            <div className="row underline">
+            <div className={`row underline ${speed >= 90 ? '' : 'dimmed'}`}>
               <div className="col-xs-4 green square">
                 Green
               </div>
