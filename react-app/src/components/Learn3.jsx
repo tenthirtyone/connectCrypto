@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Navbar,
 } from 'react-bootstrap';
@@ -8,7 +8,7 @@ import {
 class Learn3 extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-fixed">
         <div className="row">
           <h1>Learn how Project Connect works!</h1>
 

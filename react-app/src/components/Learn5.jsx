@@ -5,20 +5,44 @@ import {
 } from 'react-bootstrap';
 
 
-class Learn5 extends Component {
+class Learn4 extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-fixed">
         <div className="row">
-          <h1>Learn how Project Connect works!</h1>
           <div className="col-xs-12">
-            <p>For this phase of the project, the following information is required to drive the demo</p>
+            <h1>Try it out!</h1>
+            <p>The agreed speed for this demo is 10GiB.  Try updating the information below to see how diagram on the right changes based on the information provided.</p>
+          </div>
 
-            <p>1. The first thing that must be in place is the contract between schools of a country and an internet service provider</p>
-
-            <p>2. From this contract, a minimum internet service guarantee will exist (e.g. 100 Mbps).  This will appear as a horizontal line on the graph</p>
-
-            <p>3. The other data that is important for this is the information that is provided by schools and internet service providers</p>
+          <div className="col-xs-6">
+            Form
+          </div>
+          <div className="col-xs-6">
+            <div className="row underline">
+              <div className="col-xs-4 red square">
+                Red
+              </div>
+              <div className="col-xs-8 text-drop">
+                Internet speed has dropped > 20% of agreed speed
+              </div>
+            </div>
+            <div className="row underline">
+              <div className="col-xs-4 yellow square">
+                Yellow
+              </div>
+              <div className="col-xs-8 text-drop">
+                Internet speed {`<`} 10% - 20 % of agreed speed
+              </div>
+            </div>
+            <div className="row underline">
+              <div className="col-xs-4 green square">
+                Green
+              </div>
+              <div className="col-xs-8 text-drop">
+                Internet speed is within 10% of agreed speed
+              </div>
+            </div>
           </div>
 
         </div>
@@ -28,4 +52,4 @@ class Learn5 extends Component {
   }
 }
 
-export default Learn5;
+export default Learn4;

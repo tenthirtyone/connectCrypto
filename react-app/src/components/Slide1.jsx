@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   Navbar,
 } from 'react-bootstrap';
@@ -7,14 +7,14 @@ import {
 
 class Slide1 extends Component {
   render() {
-    const { setSlide, setMode } = this.props;
+    const {setSlide, setMode} = this.props;
     return (
-      <div className="container">
+      <div className="container-fixed">
         <div className="row">
           <h1>Welcome to Project Connect</h1>
 
           <div className="col-xs-12">
-            <p>Lorem Ipsum</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisinuli.</p>
           </div>
         </div>
         <div className="row">

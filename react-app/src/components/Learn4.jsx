@@ -8,13 +8,13 @@ import {
 class Learn4 extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-fixed">
         <div className="row">
           <div className="col-xs-12">
             <h1>Learn how Project Connect works!</h1>
           </div>
 
-          <div className="col-xs-6">
+          <div className="col-xs-6 small">
             <p>The ISP and the school will be writing to the blockchain with connectivity data at the same time. The string that they will be hashing and putting on chain will include two parts. The first part will be a color (red, yellow, green). The second part will be the date and time for when the information is to be written.</p>
 
             <p>The red / yellow / green part will be determined based on the current speed of the internet (based on sensors of some kind).  If it falls within any of the categories listed on the right, the corresponding color will show. The agreed upon speed is the internet service guarantee between schools and ISPs.</p>
@@ -27,7 +27,30 @@ class Learn4 extends Component {
             <p>- This creates an anomoly and will then drive a deduction to funds paid to ISPs</p>
           </div>
           <div className="col-xs-6">
-
+            <div className="row underline">
+              <div className="col-xs-4 red square">
+                Red
+              </div>
+              <div className="col-xs-8 text-drop">
+                Internet speed has dropped > 20% of agreed speed
+              </div>
+            </div>
+            <div className="row underline">
+              <div className="col-xs-4 yellow square">
+                Yellow
+              </div>
+              <div className="col-xs-8 text-drop">
+                Internet speed {`<`} 10% - 20 % of agreed speed
+              </div>
+            </div>
+            <div className="row underline">
+              <div className="col-xs-4 green square">
+                Green
+              </div>
+              <div className="col-xs-8 text-drop">
+                Internet speed is within 10% of agreed speed
+              </div>
+            </div>
           </div>
 
         </div>
