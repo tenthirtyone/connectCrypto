@@ -1,0 +1,104 @@
+body {
+  font-family: 'Roboto';
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.calendar-component {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+}
+.about-data {
+  color:white;
+}
+.leaflet-container {
+  z-index:-1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.leaflet-control-zoom {
+  z-index: 100000000 !important; /* was 1000 */
+  }
+.dockerClass {
+  z-index: -100 !important;
+}
+
+.hoverButton{
+  width: 25%;
+  height: 30px;
+  left: 37.5%;
+  bottom: 1px;
+  position: absolute;
+  color: white;
+  background-color: #3F3F3F;
+}
+
+.leaflet-container {
+  width: 50%;
+  left: 50%;
+  margin-left: -25%;
+  height: 50%;
+  margin-top: 20em;
+  box-shadow: 5px 5px 50px #3F3F3F;
+}
+
+p {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.541327);
+  line-height: 24px;
+}
+
+.navbar-brand {
+  color: #9CE7FF !important;
+}
+
+.btn-unicef {
+  color: #ffffff !important;
+  background: #9CE7FF;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  width: 125px;
+}
+
+.button-area {
+  text-align: center;
+}
+
+.btn-nav {
+  width: 224.44px;
+  height: 87.67px;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 5em;
+}
+
+.right {
+  position: absolute;
+  right: 1em;
+}
+
+nav {
+  height: 64px;
+  background-color: #ffffff; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-bottom {
+  
+  background-color: #9CE7FF !important;
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 100%;
+}
+
+.navbar-bottom  a {
+  margin-right: 3em;
+  color: #ffffff !important;
+}

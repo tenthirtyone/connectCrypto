@@ -1,0 +1,2 @@
+const data = { "key": "schools", "properties": ["arg", "bol", "bra", "chl", "cod", "col", "grl", "gtm", "hnd", "idn", "kaz", "ken", "kgz", "khm", "lbr", "mex", "moz", "mrt", "mwi", "nga", "nor", "per", "phl", "rwa", "sau", "sle", "srb", "tha", "tza", "uga", "usa", "zaf"] }
+module.exports = data;
