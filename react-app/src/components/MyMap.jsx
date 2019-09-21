@@ -154,6 +154,7 @@ class MyMap extends Component {
       position: 'relative',
       top: '200px'
     }
+    const { setLearnMore } = this.props;
     const position = [this.state.lat, this.state.lng]
     return (
       <div>
@@ -163,6 +164,7 @@ class MyMap extends Component {
         <Map center={position}
           zoom={this.state.zoom} ref={c => (this.map = c)}
           zoomControl={false}
+          onClick={() => { setLearnMore(true) }}
         >
           <ZoomControl position='bottomleft' />
           <TileLayer

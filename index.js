@@ -13,11 +13,9 @@ app.get('/schools/school/:school', (req, res) => {
 })
 
 app.get('/schools/countries/:id', (req, res) => {
-  const {id} = req.params;
-  console.log(id)
-  console.log(schools[id.toLowerCase()])
+  const { id } = req.params;
   // Simulate response time while map moves - need FE optimization
-  setTimeout(() => res.send(schools[id.toLowerCase()]), 1000)
+  setTimeout(() => res.send(schools[id.toLowerCase()]), 2000)
 })
 
 app.listen(5000, () => {

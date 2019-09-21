@@ -6,6 +6,23 @@ body {
   cursor: pointer;
 }
 
+.dock > div > div {
+  width: 50% !important;
+  left: 50% !important;
+  margin-left: -25%;
+  top: 47% !important;
+}
+
+.dock > div > div > div {
+  overflow: hidden !important;
+}
+
+.btn-learn-more {
+  padding: 0;
+  white-space: initial;
+  padding: 0px 15px !important;
+}
+
 .calendar-component {
   position: absolute;
   bottom: 0;

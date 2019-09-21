@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Navbar,
 } from 'react-bootstrap';
@@ -7,7 +7,7 @@ import {
 
 class Slide1 extends Component {
   render() {
-    const {setSlide} = this.props;
+    const { setSlide, setMode } = this.props;
     return (
       <div className="container">
         <div className="row">
@@ -20,11 +20,15 @@ class Slide1 extends Component {
         <div className="row">
           <div class="col-md-3 offset-md-3">
             <button className="btn-unicef btn-nav" href="#" onClick={() => {
-              setSlide(2)
+              setMode('demo');
+              setSlide(2);
             }}>DEMO 1 FINANCE</button>
           </div>
           <div class="col-md-3">
-            <button className="btn-unicef btn-nav" href="#">LEARN MORE</button>
+            <button className="btn-unicef btn-nav" href="#" onClick={() => {
+              setMode('learn');
+              setSlide(2);
+            }}>LEARN MORE</button>
           </div>
         </div>
         <div className="row">

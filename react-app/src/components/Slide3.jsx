@@ -9,6 +9,7 @@ import MyMap from '../components/MyMap'
 
 class Slide3 extends Component {
   render() {
+    const {setLearnMore} = this.props;
     return (
       <div className="container">
         <div className="row">
@@ -18,7 +19,7 @@ class Slide3 extends Component {
 
         <div className="row">
           <div className="map-area">
-            <MyMap></MyMap>
+            <MyMap setLearnMore={setLearnMore}></MyMap>
           </div>
         </div>
 
