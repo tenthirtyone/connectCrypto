@@ -60,9 +60,9 @@ class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slide: 6,
+      slide: 1,
       learnMore: false,
-      mode: 'learn',
+      mode: 'demo',
     }
   }
 
