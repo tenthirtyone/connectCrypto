@@ -87,14 +87,26 @@ class Dashboard extends Component {
       })
     }
 
+    const { slide, mode } = this.state;
+
     return (
       <div>
-
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" style={{ display: this.state.slide > 1 ? '' : 'none' }} onClick={() => {
-            setLearnMore(false)
-            setMode('demo');
-            setSlide(1);
+          <a className="navbar-brand" style={{ display: slide > 1 ? '' : 'none' }} onClick={() => {
+            if (mode === 'demo') {
+              setLearnMore(false)
+              setMode('demo');
+              setSlide(1);
+            } else {
+              if (slide > 2) {
+                setSlide(slide - 1);
+              } else {
+                setLearnMore(false)
+                setMode('demo');
+                setSlide(1);
+              }
+            }
+
           }}>BACK</a>
           <button className="navbar-brand btn-unicef right" href="#" style={{ display: (this.state.slide === 2 && this.state.mode === 'demo') || this.state.mode === 'learn' ? '' : 'none' }}
             onClick={() => {

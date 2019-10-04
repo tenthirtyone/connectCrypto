@@ -11,7 +11,7 @@ class Learn4 extends Component {
     super(props);
 
     this.state = {
-      school: '',
+      school: 'School Name',
       date: '',
       time: '',
       speed: 90,
@@ -81,6 +81,7 @@ class Learn4 extends Component {
               <label>Current Speed</label><br />
               <input type="range" min="1" max="100" className="slider" value={speed} onChange={setSpeed} />
               <label>Cryptographic Hash</label><br />
+              <label>{school} + {date || 'date'} + {time || 'time'} + {speed}</label><br />
               {hash}
             </form>
 

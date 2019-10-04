@@ -18,13 +18,13 @@ class Slide1 extends Component {
           </div>
         </div>
         <div className="row">
-          <div class="col-md-3 offset-md-3">
+          <div className="col-md-3 offset-md-3">
             <button className="btn-unicef btn-nav" href="#" onClick={() => {
               setMode('demo');
               setSlide(2);
             }}>DEMO 1 FINANCE</button>
           </div>
-          <div class="col-md-3">
+          <div className="col-md-3">
             <button className="btn-unicef btn-nav" href="#" onClick={() => {
               setMode('learn');
               setSlide(2);
@@ -32,10 +32,10 @@ class Slide1 extends Component {
           </div>
         </div>
         <div className="row">
-          <div class="col-md-3 offset-md-3">
+          <div className="col-md-3 offset-md-3">
             <button className="btn-unicef btn-nav" href="#">DEMO 2 MANAGEMENT</button>
           </div>
-          <div class="col-md-3">
+          <div className="col-md-3">
             <button className="btn-unicef btn-nav" href="#">LEARN MORE</button>
           </div>
         </div>

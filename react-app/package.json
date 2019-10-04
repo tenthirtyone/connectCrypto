@@ -41,6 +41,7 @@
     "react-scripts": "1.1.0",
     "react-webgl-leaflet": "0.0.18",
     "react-yearly-calendar": "^1.1.5",
+    "recharts": "^1.7.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.8.2"
