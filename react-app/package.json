@@ -19,7 +19,7 @@
     "husky": "^0.14.3",
     "i18n-iso-countries": "^3.3.0",
     "leaflet": "^1.2.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "node-sass": "^4.12.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
