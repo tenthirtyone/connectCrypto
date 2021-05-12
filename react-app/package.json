@@ -10,7 +10,7 @@
     "auth0-js": "^9.0.2",
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
-    "chart.js": "^2.7.1",
+    "chart.js": "^2.9.4",
     "comma-number": "^2.0.0",
     "eslint": "^4.13.1",
     "geojson": "^0.5.0",
